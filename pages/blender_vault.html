@@ -193,7 +193,7 @@
 	</footer>
 
 	<script>
-		document.querySelectorAll('.close').forEach(btn => {
+        document.querySelectorAll('.close, .prev, .next').forEach(btn => {
 			btn.addEventListener('click', () => {
 				document.querySelectorAll('.lightbox video').forEach(vid => {
 					vid.pause();

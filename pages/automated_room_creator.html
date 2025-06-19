@@ -66,7 +66,7 @@
 			<a href="#img5" class="prev">‹</a>
 			<a href="#img1" class="next">›</a>
 			<video src="../images/AutomatedRoomCreator/V_01.mp4" controls autoplay></video>
-			<div class="caption">DESCRIPTON</div>
+			<div class="caption"> asd fasdf asdf asdf DESCRIPTON</div>
 		</div>
 
 		<div id="img1" class="lightbox">
@@ -118,7 +118,7 @@
 		</footer>
 
 		<script>
-			document.querySelectorAll('.close').forEach(btn => {
+			document.querySelectorAll('.close, .prev, .next').forEach(btn => {
 				btn.addEventListener('click', () => {
 					document.querySelectorAll('.lightbox video').forEach(vid => {
 						vid.pause();
