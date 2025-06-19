@@ -63,6 +63,8 @@
 		<!-- Lightbox Modals -->
 		<div id="vid1" class="lightbox">
 			<a href="#" class="close">×</a>
+			<a href="#img5" class="prev">‹</a>
+			<a href="#img1" class="next">›</a>
 			<video src="../images/AutomatedRoomCreator/V_01.mp4" controls autoplay></video>
 			<div class="caption">DESCRIPTON</div>
 		</div>
@@ -98,12 +100,23 @@
 		</div>
 
 
-
 		<!-- Footer -->
 		<footer>
 			<div class="container">
 				<p>&copy; 2025 Wian Jacobs. All rights reserved.</p>
 			</div>
 		</footer>
+
+		<script>
+			document.querySelectorAll('.close').forEach(btn => {
+				btn.addEventListener('click', () => {
+					document.querySelectorAll('.lightbox video').forEach(vid => {
+						vid.pause();
+						vid.currentTime = 0; // Optional: rewind to start
+					});
+				});
+			});
+		</script>
+
 	</body>
 </html>
