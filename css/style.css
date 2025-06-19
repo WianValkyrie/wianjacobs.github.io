@@ -278,13 +278,16 @@ footer {
 
 .lightbox .caption {
   position: absolute;
-  bottom: 1rem;
-  left: 1.5rem;
-  color: #ccc;
-  font-size: 0.9rem;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.25rem;
   font-family: sans-serif;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  max-width: 90%;
 }
 
