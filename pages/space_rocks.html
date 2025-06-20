@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Automated Room Creator</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header>
+			<div class="container header-container">
+				<h1 class="logo">
+					<a href="../index.html#section-3d">Wian Jacobs</a>
+				</h1>
+				<nav>
+					<ul class="nav-links">
+						<li><a href="../index.html#section-3d">3D Design & Visualization</a></li>
+						<li><a href="../index.html#section-game">Game Development</a></li>
+						<li><a href="../index.html#section-art">My Art</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="project-header">
+			<h1>Space Rocks</h1>
+			<p>
+				Space Rocks is a 3D reimagining of the classic game Asteroids,
+				developed as a one-week team project during my studies using Unity.
+				As project lead, I oversaw the development process and was responsible for scripting the core gameplay mechanics, excluding enemy spaceship AI.
+			</p>
+
+			<p>
+				Download Link: <a href="https://drive.google.com/drive/folders/1d6JbPvQ2jNQzKTVJGTNfHAZW0xLCsnuH">Space Rocks</a>
+			</p>
+		</div>
+
+		<div class="project-gallery">
+			<!-- Video with popup -->
+			<a href="#vid1">
+				<video src="../images/SpaceRocks/V_01.mp4" muted autoplay loop></video>
+			</a>
+
+			<!-- Image with popup -->
+			<a href="#img1">
+				<img src="../images/SpaceRocks/I_01.jpg" alt="Preview">
+			</a>
+			<a href="#img2">
+				<img src="../images/SpaceRocks/I_02.jpg" alt="Preview">
+			</a>
+			<a href="#img3">
+				<img src="../images/SpaceRocks/I_03.jpg" alt="Preview">
+			</a>
+			<a href="#img4">
+				<img src="../images/SpaceRocks/I_04.jpg" alt="Preview">
+			</a>
+			<a href="#img5">
+				<img src="../images/SpaceRocks/I_05.jpg" alt="Preview">
+			</a>
+			<a href="#img6">
+				<img src="../images/SpaceRocks/I_06.jpg" alt="Preview">
+			</a>
+
+
+		</div>
+
+		<!-- Lightbox Modals -->
+		<div id="vid1" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#img6" class="prev">‹</a>
+			<a href="#img1" class="next">›</a>
+			<video src="../images/SpaceRocks/V_01.mp4" controls autoplay></video>
+			<div class="caption"> asd fasdf asdf asdf DESCRIPTON</div>
+		</div>
+
+		<div id="img1" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#vid1" class="prev">‹</a>
+			<a href="#img2" class="next">›</a>
+			<img src="../images/SpaceRocks/I_01.jpg" alt="">
+			<div class="caption">DESCRIPTON</div>
+		</div>
+
+		<div id="img2" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#img1" class="prev">‹</a>
+			<a href="#img3" class="next">›</a>
+			<img src="../images/SpaceRocks/I_02.jpg" alt="">
+			<div class="caption">DESCRIPTON</div>
+		</div>
+
+		<div id="img3" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#img2" class="prev">‹</a>
+			<a href="#img4" class="next">›</a>
+			<img src="../images/SpaceRocks/I_03.jpg" alt="">
+			<div class="caption">DESCRIPTON</div>
+		</div>
+
+		<div id="img4" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#img3" class="prev">‹</a>
+			<a href="#img5" class="next">›</a>
+			<img src="../images/SpaceRocks/I_04.jpg" alt="">
+			<div class="caption">DESCRIPTON</div>
+		</div>
+
+		<div id="img5" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#img4" class="prev">‹</a>
+			<a href="#img6" class="next">›</a>
+			<img src="../images/SpaceRocks/I_05.jpg" alt="">
+			<div class="caption">DESCRIPTON</div>
+		</div>
+
+		<div id="img6" class="lightbox">
+			<a href="#" class="close">×</a>
+			<a href="#img5" class="prev">‹</a>
+			<a href="#vid1" class="next">›</a>
+			<img src="../images/SpaceRocks/I_06.jpg" alt="">
+			<div class="caption">DESCRIPTON</div>
+		</div>
+
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<p>&copy; 2025 Wian Jacobs. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelectorAll('.close, .prev, .next').forEach(btn => {
+				btn.addEventListener('click', () => {
+					document.querySelectorAll('.lightbox video').forEach(vid => {
+						vid.pause();
+						vid.currentTime = 0; // Optional: rewind to start
+					});
+				});
+			});
+		</script>
+
+	</body>
+</html>
