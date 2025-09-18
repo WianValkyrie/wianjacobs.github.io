@@ -36,6 +36,10 @@
 
 	<div class="project-gallery">
 		<!-- Video with popup -->
+		<a href="#vid0">
+			<video src="../images/MusicVideos/V_00.mp4" muted autoplay loop></video>
+		</a>
+
 		<a href="#vid1">
 			<video src="../images/MusicVideos/V_01.mp4" muted autoplay loop></video>
 		</a>
@@ -61,12 +65,20 @@
 	</div>
 
 	<!-- Lightbox Modals -->
-	<div id="vid1" class="lightbox">
+	<div id="vid0" class="lightbox">
 		<a href="#" class="close">×</a>
 		<a href="#img5" class="prev">‹</a>
+		<a href="#vid1" class="next">›</a>
+		<video src="../images/MusicVideos/V_00.mp4" controls autoplay></video>
+		<div class="caption">Final Music Video: Abaddon - City of the Silent</div>
+	</div>
+
+	<div id="vid1" class="lightbox">
+		<a href="#" class="close">×</a>
+		<a href="#vid0" class="prev">‹</a>
 		<a href="#img1" class="next">›</a>
 		<video src="../images/MusicVideos/V_01.mp4" controls autoplay></video>
-		<div class="caption">Final Music Video</div>
+		<div class="caption">Final Music Video: Abaddon - Road to Damnation</div>
 	</div>
 
 	<div id="img1" class="lightbox">
@@ -118,14 +130,14 @@
 	</footer>
 
 	<script>
-			document.querySelectorAll('.close, .prev, .next').forEach(btn => {
-				btn.addEventListener('click', () => {
-					document.querySelectorAll('.lightbox video').forEach(vid => {
-						vid.pause();
-						vid.currentTime = 0; // Optional: rewind to start
-					});
+		document.querySelectorAll('.close, .prev, .next').forEach(btn => {
+			btn.addEventListener('click', () => {
+				document.querySelectorAll('.lightbox video').forEach(vid => {
+					vid.pause();
+					vid.currentTime = 0; // Optional: rewind to start
 				});
 			});
+		});
 	</script>
 
 </body>
